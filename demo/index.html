@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="../assets/virus.png" />
+    <title>Mini Bootcamp Covid19 App Tracker</title>
+    <style>
+      /* Font */
+      @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+      /* Design */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        background-color: #0a192f;
+      }
+
+      body {
+        color: #272727;
+        font-family: 'Quicksand', serif;
+        font-style: normal;
+        letter-spacing: 0;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo"></div>
+
+    <script type="module">
+      import { html, render } from 'lit-html';
+      import '../app-tracker-robbie.js';
+
+      const title = 'Covid Tracker App';
+      render(
+        html`
+          <app-tracker-robbie .title=${title}>
+            <h1>App Tracker by RALM</h1>
+          </app-tracker-robbie>
+        `,
+        document.querySelector('#demo')
+      );
+    </script>
+  </body>
+</html>
